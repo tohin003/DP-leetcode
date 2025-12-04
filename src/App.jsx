@@ -1,9 +1,26 @@
+
 import React from 'react';
 import { questions } from './data/questions';
 import QuestionCard from './components/QuestionCard';
 import { Sparkles, Code2, Github } from 'lucide-react';
 
 function App() {
+  const [completed, setCompleted] = React.useState(() => {
+    const saved = localStorage.getItem('dp-tracker-completed');
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem('dp-tracker-completed', JSON.stringify(completed));
+  }, [completed]);
+
+  const toggleCompletion = (id) => {
+    setCompleted(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -30,7 +47,13 @@ function App() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {questions.map((q, index) => (
-            <QuestionCard key={q.id} question={q} index={index} />
+            <QuestionCard
+              key={q.id}
+              question={q}
+              index={index}
+              isCompleted={!!completed[q.id]}
+              toggleCompletion={toggleCompletion}
+            />
           ))}
         </div>
 
