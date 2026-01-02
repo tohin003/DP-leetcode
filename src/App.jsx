@@ -2,7 +2,7 @@
 import React from 'react';
 import { categories } from './data/questions';
 import QuestionCard from './components/QuestionCard';
-import { Sparkles, Code2, Github, LayoutGrid, Network } from 'lucide-react';
+import { Sparkles, Code2, Github, LayoutGrid, Network, Share2 } from 'lucide-react';
 
 function App() {
   const [activeCategory, setActiveCategory] = React.useState('dp');
@@ -66,6 +66,16 @@ function App() {
             >
               <Network className="w-4 h-4" />
               Trees & Graphs
+            </button>
+            <button
+              onClick={() => setActiveCategory('graphs')}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${activeCategory === 'graphs'
+                  ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                }`}
+            >
+              <Share2 className="w-4 h-4" />
+              Graphs & Advanced
             </button>
           </div>
         </div>

@@ -332,5 +332,172 @@ export const categories = {
                 url: "https://leetcode.com/problems/sum-of-distances-in-tree/"
             }
         ]
+    },
+    graphs: {
+        id: 'graphs',
+        title: "Graphs & Advanced",
+        description: "Conquer Graph Theory, Heaps, and Tries",
+        questions: [
+            {
+                id: 41,
+                problem: "Number of Islands",
+                difficulty: "Med",
+                timeComplexity: "O(M⋅N)",
+                concept: "Grid DFS/BFS, Connected Components.",
+                url: "https://leetcode.com/problems/number-of-islands/"
+            },
+            {
+                id: 42,
+                problem: "Rotting Oranges",
+                difficulty: "Med",
+                timeComplexity: "O(M⋅N)",
+                concept: "Multi-Source BFS, Shortest Path in Grid.",
+                url: "https://leetcode.com/problems/rotting-oranges/"
+            },
+            {
+                id: 43,
+                problem: "Clone Graph",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "DFS/BFS with Hash Map for deep copy.",
+                url: "https://leetcode.com/problems/clone-graph/"
+            },
+            {
+                id: 44,
+                problem: "Pacific Atlantic Water Flow",
+                difficulty: "Med",
+                timeComplexity: "O(M⋅N)",
+                concept: "DFS/BFS from boundaries (Reverse Flow).",
+                url: "https://leetcode.com/problems/pacific-atlantic-water-flow/"
+            },
+            {
+                id: 45,
+                problem: "Course Schedule",
+                difficulty: "Med",
+                timeComplexity: "O(V+E)",
+                concept: "Topological Sort (Kahn's or DFS), Cycle Detection.",
+                url: "https://leetcode.com/problems/course-schedule/"
+            },
+            {
+                id: 46,
+                problem: "Course Schedule II",
+                difficulty: "Med",
+                timeComplexity: "O(V+E)",
+                concept: "Topological Sort, Ordering generation.",
+                url: "https://leetcode.com/problems/course-schedule-ii/"
+            },
+            {
+                id: 47,
+                problem: "Number of Provinces",
+                difficulty: "Med",
+                timeComplexity: "O(V²)",
+                concept: "Union-Find or DFS, Connected Components.",
+                url: "https://leetcode.com/problems/number-of-provinces/"
+            },
+            {
+                id: 48,
+                problem: "Redundant Connection",
+                difficulty: "Med",
+                timeComplexity: "O(N⋅α(N))",
+                concept: "Union-Find (Cycle Detection in undirected graph).",
+                url: "https://leetcode.com/problems/redundant-connection/"
+            },
+            {
+                id: 49,
+                problem: "Accounts Merge",
+                difficulty: "Med",
+                timeComplexity: "O(N⋅α(N))",
+                concept: "Union-Find on emails, Component Grouping.",
+                url: "https://leetcode.com/problems/accounts-merge/"
+            },
+            {
+                id: 50,
+                problem: "Network Delay Time",
+                difficulty: "Med",
+                timeComplexity: "O(ElogV)",
+                concept: "Dijkstra's Algorithm (Shortest Path).",
+                url: "https://leetcode.com/problems/network-delay-time/"
+            },
+            {
+                id: 51,
+                problem: "Cheapest Flights Within K Stops",
+                difficulty: "Med",
+                timeComplexity: "O(K⋅E)",
+                concept: "Bellman-Ford or Dijkstra with state.",
+                url: "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+            },
+            {
+                id: 52,
+                problem: "Word Ladder",
+                difficulty: "Hard",
+                timeComplexity: "O(M²⋅N)",
+                concept: "BFS for Shortest Path in unweighted graph.",
+                url: "https://leetcode.com/problems/word-ladder/"
+            },
+            {
+                id: 53,
+                problem: "Longest Increasing Path in a Matrix",
+                difficulty: "Hard",
+                timeComplexity: "O(M⋅N)",
+                concept: "DFS + Memoization (DP on Grid).",
+                url: "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/"
+            },
+            {
+                id: 54,
+                problem: "Kth Largest Element in an Array",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "QuickSelect or Min-Heap.",
+                url: "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+            },
+            {
+                id: 55,
+                problem: "Top K Frequent Elements",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Bucket Sort or Min-Heap.",
+                url: "https://leetcode.com/problems/top-k-frequent-elements/"
+            },
+            {
+                id: 56,
+                problem: "Find Median from Data Stream",
+                difficulty: "Hard",
+                timeComplexity: "O(logN)",
+                concept: "Two Heaps (Min-Heap + Max-Heap balancing).",
+                url: "https://leetcode.com/problems/find-median-from-data-stream/"
+            },
+            {
+                id: 57,
+                problem: "Merge k Sorted Lists",
+                difficulty: "Hard",
+                timeComplexity: "O(NlogK)",
+                concept: "Min-Heap (Priority Queue).",
+                url: "https://leetcode.com/problems/merge-k-sorted-lists/"
+            },
+            {
+                id: 58,
+                problem: "Implement Trie (Prefix Tree)",
+                difficulty: "Med",
+                timeComplexity: "O(L)",
+                concept: "Trie Construction & Search.",
+                url: "https://leetcode.com/problems/implement-trie-prefix-tree/"
+            },
+            {
+                id: 59,
+                problem: "Design Add and Search Words Data Structure",
+                difficulty: "Med",
+                timeComplexity: "O(M)",
+                concept: "Trie with Backtracking (Wildcard .).",
+                url: "https://leetcode.com/problems/design-add-and-search-words-data-structure/"
+            },
+            {
+                id: 60,
+                problem: "Word Search II",
+                difficulty: "Hard",
+                timeComplexity: "O(M⋅N⋅4^L)",
+                concept: "Trie + DFS/Backtracking on Grid.",
+                url: "https://leetcode.com/problems/word-search-ii/"
+            }
+        ]
     }
 };
