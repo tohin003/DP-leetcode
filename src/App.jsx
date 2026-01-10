@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { categories } from './data/questions';
 import QuestionCard from './components/QuestionCard';
-import { Sparkles, Code2, Github, LayoutGrid, Network, Share2 } from 'lucide-react';
+import {
+  Sparkles, Code2, Github, LayoutGrid, Network, Share2,
+  AppWindow, Layers, Zap
+} from 'lucide-react';
 
 function App() {
   const [activeCategory, setActiveCategory] = React.useState('dp');
@@ -24,6 +26,19 @@ function App() {
 
   const currentCategory = categories[activeCategory];
 
+  const CategoryButton = ({ id, icon: Icon, label }) => (
+    <button
+      onClick={() => setActiveCategory(id)}
+      className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 w-full justify-center ${activeCategory === id
+          ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25'
+          : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+        }`}
+    >
+      <Icon className="w-4 h-4 flex-shrink-0" />
+      <span className="whitespace-nowrap">{label}</span>
+    </button>
+  );
+
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -42,71 +57,47 @@ function App() {
           </h1>
 
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            A curated collection of high-signal problems to help you crack technical interviews.
+            A curated collection of 90 high-signal problems to help you crack technical interviews.
           </p>
 
-          {/* Category Switcher */}
-          <div className="inline-flex p-1 rounded-xl bg-slate-900/50 border border-glass-border backdrop-blur-sm">
-            <button
-              onClick={() => setActiveCategory('dp')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${activeCategory === 'dp'
-                  ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
-                }`}
-            >
-              <LayoutGrid className="w-4 h-4" />
-              Dynamic Programming
-            </button>
-            <button
-              onClick={() => setActiveCategory('trees')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${activeCategory === 'trees'
-                  ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
-                }`}
-            >
-              <Network className="w-4 h-4" />
-              Trees & Graphs
-            </button>
-            <button
-              onClick={() => setActiveCategory('graphs')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${activeCategory === 'graphs'
-                  ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
-                }`}
-            >
-              <Share2 className="w-4 h-4" />
-              Graphs & Advanced
-            </button>
+          {/* Category Switcher - Responsive Grid */}
+          <div className="bg-slate-900/50 p-1 rounded-xl border border-glass-border backdrop-blur-sm mx-auto max-w-5xl overflow-hidden">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1">
+              <CategoryButton id="dp" icon={LayoutGrid} label="Dynamic Prog" />
+              <CategoryButton id="trees" icon={Network} label="Trees & Graphs" />
+              <CategoryButton id="graphs" icon={Share2} label="Adv. Graphs" />
+              <CategoryButton id="arrays" icon={AppWindow} label="Arrays & Str" />
+              <CategoryButton id="stack" icon={Layers} label="Rec & Stack" />
+              <CategoryButton id="greedy" icon={Zap} label="Greedy" />
+            </div>
           </div>
         </div>
 
-        {/* Category Info */}
-        <div className="mb-8 text-center">
-          <h2 className="text-2xl font-bold text-slate-200 mb-2">{currentCategory.title}</h2>
-          <p className="text-slate-400">{currentCategory.description}</p>
-        </div>
+        {/* Content Section */}
+        <div className="mb-12">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-slate-100 mb-2">{currentCategory.title}</h2>
+            <p className="text-slate-400">{currentCategory.description}</p>
+          </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {currentCategory.questions.map((q, index) => (
-            <QuestionCard
-              key={q.id}
-              question={q}
-              index={index}
-              isCompleted={!!completed[q.id]}
-              toggleCompletion={toggleCompletion}
-            />
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {currentCategory.questions.map((q) => (
+              <QuestionCard
+                key={q.id}
+                {...q}
+                isCompleted={!!completed[q.id]}
+                onToggle={() => toggleCompletion(q.id)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Footer */}
-        <footer className="mt-20 text-center text-slate-500 text-sm">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Code2 className="w-5 h-5" />
-            <span>Built for developers, by developers</span>
-          </div>
-          <p>© {new Date().getFullYear()} DP Tracker. All rights reserved.</p>
-        </footer>
+        <div className="text-center text-slate-500 text-sm">
+          <p className="flex items-center justify-center gap-2">
+            Built with <Code2 className="w-4 h-4" /> for the community
+          </p>
+        </div>
       </div>
     </div>
   );

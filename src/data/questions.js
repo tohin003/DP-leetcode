@@ -22,11 +22,11 @@ export const categories = {
             },
             {
                 id: 3,
-                problem: "Regular Expression Matching",
-                difficulty: "Hard",
+                problem: "Longest Common Subsequence",
+                difficulty: "Med",
                 timeComplexity: "O(MN)",
-                concept: "Complex state transitions, handling edge cases (*).",
-                url: "https://leetcode.com/problems/regular-expression-matching/"
+                concept: "2D Grid DP, String Matching.",
+                url: "https://leetcode.com/problems/longest-common-subsequence/"
             },
             {
                 id: 4,
@@ -54,11 +54,11 @@ export const categories = {
             },
             {
                 id: 7,
-                problem: "Find the Safest Path in a Grid",
+                problem: "Unique Paths",
                 difficulty: "Med",
-                timeComplexity: "O(N²logN)",
-                concept: "Hybrid (Multi-source BFS + Priority Queue/BinSearch).",
-                url: "https://leetcode.com/problems/find-the-safest-path-in-a-grid/"
+                timeComplexity: "O(M⋅N)",
+                concept: "Fundamental Grid DP.",
+                url: "https://leetcode.com/problems/unique-paths/"
             },
             {
                 id: 8,
@@ -86,11 +86,11 @@ export const categories = {
             },
             {
                 id: 11,
-                problem: "Numbers At Most N Given Digit Set",
-                difficulty: "Hard",
-                timeComplexity: "O(logN)",
-                concept: "Digit DP, combinatorics with constraints.",
-                url: "https://leetcode.com/problems/numbers-at-most-n-given-digit-set/"
+                problem: "Decode Ways",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "1D DP, String Partitioning.",
+                url: "https://leetcode.com/problems/decode-ways/"
             },
             {
                 id: 12,
@@ -110,7 +110,7 @@ export const categories = {
             },
             {
                 id: 14,
-                problem: "Maximum Subarray (Variations)",
+                problem: "Maximum Subarray",
                 difficulty: "Med",
                 timeComplexity: "O(N)",
                 concept: "Kadane’s Algorithm, state machine for deletions.",
@@ -134,11 +134,11 @@ export const categories = {
             },
             {
                 id: 17,
-                problem: "Sentence Similarity II",
+                problem: "House Robber II",
                 difficulty: "Med",
-                timeComplexity: "O(N⋅α(N))",
-                concept: "Union-Find vs. Transitive Closure DP.",
-                url: "https://leetcode.com/problems/sentence-similarity-ii/"
+                timeComplexity: "O(N)",
+                concept: "Circular DP (Break circle into two linear problems).",
+                url: "https://leetcode.com/problems/house-robber-ii/"
             },
             {
                 id: 18,
@@ -497,6 +497,267 @@ export const categories = {
                 timeComplexity: "O(M⋅N⋅4^L)",
                 concept: "Trie + DFS/Backtracking on Grid.",
                 url: "https://leetcode.com/problems/word-search-ii/"
+            }
+        ]
+    },
+    arrays: {
+        id: 'arrays',
+        title: "Arrays & Strings",
+        description: "Sliding Window, Two Pointers, and Hashing",
+        questions: [
+            {
+                id: 61,
+                problem: "3Sum",
+                difficulty: "Med",
+                timeComplexity: "O(N²)",
+                concept: "Two Pointers, sorting to avoid duplicates.",
+                url: "https://leetcode.com/problems/3sum/"
+            },
+            {
+                id: 62,
+                problem: "Container With Most Water",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Two Pointers (Greedy shrinkage).",
+                url: "https://leetcode.com/problems/container-with-most-water/"
+            },
+            {
+                id: 63,
+                problem: "Longest Substring Without Repeating Characters",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Sliding Window with Hash Map/Set.",
+                url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+            },
+            {
+                id: 64,
+                problem: "Product of Array Except Self",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Prefix and Suffix arrays (or O(1) space opt).",
+                url: "https://leetcode.com/problems/product-of-array-except-self/"
+            },
+            {
+                id: 65,
+                problem: "Group Anagrams",
+                difficulty: "Med",
+                timeComplexity: "O(N⋅K)",
+                concept: "Hashing with sorted string key.",
+                url: "https://leetcode.com/problems/group-anagrams/"
+            },
+            {
+                id: 66,
+                problem: "Subarray Sum Equals K",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Prefix Sum + Hash Map.",
+                url: "https://leetcode.com/problems/subarray-sum-equals-k/"
+            },
+            {
+                id: 67,
+                problem: "Longest Palindromic Substring",
+                difficulty: "Med",
+                timeComplexity: "O(N²)",
+                concept: "Expand Around Center.",
+                url: "https://leetcode.com/problems/longest-palindromic-substring/"
+            },
+            {
+                id: 68,
+                problem: "Next Permutation",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Array Manipulation, finding swap point.",
+                url: "https://leetcode.com/problems/next-permutation/"
+            },
+            {
+                id: 69,
+                problem: "Set Matrix Zeroes",
+                difficulty: "Med",
+                timeComplexity: "O(M⋅N)",
+                concept: "In-place Matrix modification using first row/col.",
+                url: "https://leetcode.com/problems/set-matrix-zeroes/"
+            },
+            {
+                id: 70,
+                problem: "Rotate Image",
+                difficulty: "Med",
+                timeComplexity: "O(M⋅N)",
+                concept: "Matrix Transpose + Reflect.",
+                url: "https://leetcode.com/problems/rotate-image/"
+            }
+        ]
+    },
+    stack: {
+        id: 'stack',
+        title: "Recursion & Stack",
+        description: "Backtracking, Monotonic Stacks, and divide & conquer",
+        questions: [
+            {
+                id: 71,
+                problem: "Subsets II",
+                difficulty: "Med",
+                timeComplexity: "O(2^N)",
+                concept: "Backtracking with duplicate handling.",
+                url: "https://leetcode.com/problems/subsets-ii/"
+            },
+            {
+                id: 72,
+                problem: "Combination Sum",
+                difficulty: "Med",
+                timeComplexity: "O(2^N)",
+                concept: "Backtracking with reuse of elements.",
+                url: "https://leetcode.com/problems/combination-sum/"
+            },
+            {
+                id: 73,
+                problem: "Letter Combinations of a Phone Number",
+                difficulty: "Med",
+                timeComplexity: "O(4^N)",
+                concept: "Backtracking / DFS.",
+                url: "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+            },
+            {
+                id: 74,
+                problem: "Palindrome Partitioning",
+                difficulty: "Med",
+                timeComplexity: "O(N⋅2^N)",
+                concept: "Backtracking + Palindrome Check.",
+                url: "https://leetcode.com/problems/palindrome-partitioning/"
+            },
+            {
+                id: 75,
+                problem: "Word Search",
+                difficulty: "Med",
+                timeComplexity: "O(MN⋅3^L)",
+                concept: "DFS/Backtracking on Grid.",
+                url: "https://leetcode.com/problems/word-search/"
+            },
+            {
+                id: 76,
+                problem: "Valid Parentheses",
+                difficulty: "Easy",
+                timeComplexity: "O(N)",
+                concept: "Basic Stack usage.",
+                url: "https://leetcode.com/problems/valid-parentheses/"
+            },
+            {
+                id: 77,
+                problem: "Daily Temperatures",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Monotonic Stack (decreasing).",
+                url: "https://leetcode.com/problems/daily-temperatures/"
+            },
+            {
+                id: 78,
+                problem: "Min Stack",
+                difficulty: "Med",
+                timeComplexity: "O(1)",
+                concept: "Stack Design with auxiliary stack.",
+                url: "https://leetcode.com/problems/min-stack/"
+            },
+            {
+                id: 79,
+                problem: "Largest Rectangle in Histogram",
+                difficulty: "Hard",
+                timeComplexity: "O(N)",
+                concept: "Monotonic Stack (increasing).",
+                url: "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+            },
+            {
+                id: 80,
+                problem: "LRU Cache",
+                difficulty: "Med",
+                timeComplexity: "O(1)",
+                concept: "Doubly Linked List + Hash Map.",
+                url: "https://leetcode.com/problems/lru-cache/"
+            }
+        ]
+    },
+    greedy: {
+        id: 'greedy',
+        title: "Greedy & Intervals",
+        description: "Interval Scheduling and Greedy Strategies",
+        questions: [
+            {
+                id: 81,
+                problem: "Merge Intervals",
+                difficulty: "Med",
+                timeComplexity: "O(NlogN)",
+                concept: "Sorting + Merging overlaps.",
+                url: "https://leetcode.com/problems/merge-intervals/"
+            },
+            {
+                id: 82,
+                problem: "Insert Interval",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Interval logic without re-sorting.",
+                url: "https://leetcode.com/problems/insert-interval/"
+            },
+            {
+                id: 83,
+                problem: "Non-overlapping Intervals",
+                difficulty: "Med",
+                timeComplexity: "O(NlogN)",
+                concept: "Greedy (sort by end time).",
+                url: "https://leetcode.com/problems/non-overlapping-intervals/"
+            },
+            {
+                id: 84,
+                problem: "Jump Game",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Greedy (tracking max reach).",
+                url: "https://leetcode.com/problems/jump-game/"
+            },
+            {
+                id: 85,
+                problem: "Jump Game II",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Greedy (BFS-like range update).",
+                url: "https://leetcode.com/problems/jump-game-ii/"
+            },
+            {
+                id: 86,
+                problem: "Gas Station",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Greedy (total sum vs current sum).",
+                url: "https://leetcode.com/problems/gas-station/"
+            },
+            {
+                id: 87,
+                problem: "Candy",
+                difficulty: "Hard",
+                timeComplexity: "O(N)",
+                concept: "Two-pass Greedy (Left-to-Right, Right-to-Left).",
+                url: "https://leetcode.com/problems/candy/"
+            },
+            {
+                id: 88,
+                problem: "Single Number",
+                difficulty: "Easy",
+                timeComplexity: "O(N)",
+                concept: "Bit Manipulation (XOR properties).",
+                url: "https://leetcode.com/problems/single-number/"
+            },
+            {
+                id: 89,
+                problem: "Majority Element",
+                difficulty: "Easy",
+                timeComplexity: "O(N)",
+                concept: "Boyer-Moore Voting Algorithm.",
+                url: "https://leetcode.com/problems/majority-element/"
+            },
+            {
+                id: 90,
+                problem: "Partition Labels",
+                difficulty: "Med",
+                timeComplexity: "O(N)",
+                concept: "Greedy Two Pointers (Last occurrence).",
+                url: "https://leetcode.com/problems/partition-labels/"
             }
         ]
     }
