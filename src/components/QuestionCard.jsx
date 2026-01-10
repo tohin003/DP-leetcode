@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Clock, Brain, BarChart2, Check } from 'lucide-react';
+import { ExternalLink, Clock, Brain, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const DifficultyBadge = ({ difficulty }) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { categories } from './data/questions';
 import QuestionCard from './components/QuestionCard';
 import {
-  Sparkles, Code2, Github, LayoutGrid, Network, Share2,
+  Sparkles, Code2, LayoutGrid, Network, Share2,
   AppWindow, Layers, Zap
 } from 'lucide-react';
 
@@ -81,12 +81,13 @@ function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentCategory.questions.map((q) => (
+            {currentCategory.questions.map((q, index) => (
               <QuestionCard
                 key={q.id}
-                {...q}
+                question={q}
+                index={index}
                 isCompleted={!!completed[q.id]}
-                onToggle={() => toggleCompletion(q.id)}
+                toggleCompletion={toggleCompletion}
               />
             ))}
           </div>
