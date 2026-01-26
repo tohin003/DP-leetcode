@@ -3,7 +3,7 @@ import { categories } from './data/questions';
 import QuestionCard from './components/QuestionCard';
 import {
   Sparkles, Code2, LayoutGrid, Network, Share2,
-  AppWindow, Layers, Zap
+  AppWindow, Layers, Zap, Rocket
 } from 'lucide-react';
 
 function App() {
@@ -30,8 +30,8 @@ function App() {
     <button
       onClick={() => setActiveCategory(id)}
       className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 w-full justify-center ${activeCategory === id
-          ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25'
-          : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+        ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25'
+        : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
         }`}
     >
       <Icon className="w-4 h-4 flex-shrink-0" />
@@ -57,18 +57,19 @@ function App() {
           </h1>
 
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            A curated collection of 90 high-signal problems to help you crack technical interviews.
+            A curated collection of 105 high-signal problems to help you crack technical interviews.
           </p>
 
           {/* Category Switcher - Responsive Grid */}
           <div className="bg-slate-900/50 p-1 rounded-xl border border-glass-border backdrop-blur-sm mx-auto max-w-5xl overflow-hidden">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1">
-              <CategoryButton id="dp" icon={LayoutGrid} label="Dynamic Prog" />
-              <CategoryButton id="trees" icon={Network} label="Trees & Graphs" />
-              <CategoryButton id="graphs" icon={Share2} label="Adv. Graphs" />
-              <CategoryButton id="arrays" icon={AppWindow} label="Arrays & Str" />
-              <CategoryButton id="stack" icon={Layers} label="Rec & Stack" />
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-1">
+              <CategoryButton id="dp" icon={LayoutGrid} label="DP" />
+              <CategoryButton id="trees" icon={Network} label="Trees" />
+              <CategoryButton id="graphs" icon={Share2} label="Graphs" />
+              <CategoryButton id="arrays" icon={AppWindow} label="Arrays" />
+              <CategoryButton id="stack" icon={Layers} label="Stack" />
               <CategoryButton id="greedy" icon={Zap} label="Greedy" />
+              <CategoryButton id="advanced" icon={Rocket} label="Advanced" />
             </div>
           </div>
         </div>

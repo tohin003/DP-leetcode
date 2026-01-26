@@ -760,5 +760,132 @@ export const categories = {
                 url: "https://leetcode.com/problems/partition-labels/"
             }
         ]
+    },
+    advanced: {
+        id: 'advanced',
+        title: "Advanced DP + Graph",
+        description: "Elite interview problems combining Dynamic Programming with Graph Theory",
+        questions: [
+            {
+                id: 91,
+                problem: "Shortest Path in a Grid with Obstacles Elimination",
+                difficulty: "Hard",
+                timeComplexity: "O(M⋅N⋅K)",
+                concept: "BFS + State Tracking (3D state: row, col, remaining eliminations).",
+                url: "https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/"
+            },
+            {
+                id: 92,
+                problem: "Minimum Cost to Make at Least One Valid Path in a Grid",
+                difficulty: "Hard",
+                timeComplexity: "O(M⋅N)",
+                concept: "0-1 BFS with Deque (Path costs 0 or 1).",
+                url: "https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/"
+            },
+            {
+                id: 93,
+                problem: "Frog Jump",
+                difficulty: "Hard",
+                timeComplexity: "O(N²)",
+                concept: "DP with state as (stone, last jump size).",
+                url: "https://leetcode.com/problems/frog-jump/"
+            },
+            {
+                id: 94,
+                problem: "Critical Connections in a Network",
+                difficulty: "Hard",
+                timeComplexity: "O(V+E)",
+                concept: "Tarjan's Algorithm for Bridges.",
+                url: "https://leetcode.com/problems/critical-connections-in-a-network/"
+            },
+            {
+                id: 95,
+                problem: "Swim in Rising Water",
+                difficulty: "Hard",
+                timeComplexity: "O(N²logN)",
+                concept: "Binary Search + BFS or Dijkstra on Grid.",
+                url: "https://leetcode.com/problems/swim-in-rising-water/"
+            },
+            {
+                id: 96,
+                problem: "Shortest Path Visiting All Nodes",
+                difficulty: "Hard",
+                timeComplexity: "O(2^N⋅N²)",
+                concept: "BFS + Bitmask DP (Traveling Salesman variant).",
+                url: "https://leetcode.com/problems/shortest-path-visiting-all-nodes/"
+            },
+            {
+                id: 97,
+                problem: "Minimum Number of Days to Eat N Oranges",
+                difficulty: "Hard",
+                timeComplexity: "O(logN)",
+                concept: "BFS/Memoization with state reduction.",
+                url: "https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/"
+            },
+            {
+                id: 98,
+                problem: "Parallel Courses II",
+                difficulty: "Hard",
+                timeComplexity: "O(3^N)",
+                concept: "Bitmask DP + Subset Enumeration.",
+                url: "https://leetcode.com/problems/parallel-courses-ii/"
+            },
+            {
+                id: 99,
+                problem: "Shortest Path to Get All Keys",
+                difficulty: "Hard",
+                timeComplexity: "O(M⋅N⋅2^K)",
+                concept: "BFS + Bitmask for key collection.",
+                url: "https://leetcode.com/problems/shortest-path-to-get-all-keys/"
+            },
+            {
+                id: 100,
+                problem: "Number of Ways to Arrive at Destination",
+                difficulty: "Med",
+                timeComplexity: "O(ElogV)",
+                concept: "Dijkstra + Count shortest paths (DP on graph).",
+                url: "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/"
+            },
+            {
+                id: 101,
+                problem: "Reconstruct Itinerary",
+                difficulty: "Hard",
+                timeComplexity: "O(ElogE)",
+                concept: "Hierholzer's Algorithm (Eulerian Path).",
+                url: "https://leetcode.com/problems/reconstruct-itinerary/"
+            },
+            {
+                id: 102,
+                problem: "Path With Minimum Effort",
+                difficulty: "Med",
+                timeComplexity: "O(M⋅N⋅log(MaxDiff))",
+                concept: "Binary Search + BFS or Dijkstra.",
+                url: "https://leetcode.com/problems/path-with-minimum-effort/"
+            },
+            {
+                id: 103,
+                problem: "Minimum Cost to Connect All Points",
+                difficulty: "Med",
+                timeComplexity: "O(N²logN)",
+                concept: "Prim's or Kruskal's MST Algorithm.",
+                url: "https://leetcode.com/problems/minimum-cost-to-connect-all-points/"
+            },
+            {
+                id: 104,
+                problem: "Find the Shortest Superstring",
+                difficulty: "Hard",
+                timeComplexity: "O(N²⋅2^N)",
+                concept: "TSP with Bitmask DP + String overlap.",
+                url: "https://leetcode.com/problems/find-the-shortest-superstring/"
+            },
+            {
+                id: 105,
+                problem: "Cat and Mouse",
+                difficulty: "Hard",
+                timeComplexity: "O(N³)",
+                concept: "Game Theory DP on Graph (Minimax with states).",
+                url: "https://leetcode.com/problems/cat-and-mouse/"
+            }
+        ]
     }
 };
